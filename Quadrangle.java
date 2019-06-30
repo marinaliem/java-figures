@@ -109,7 +109,17 @@ public class Quadrangle {
 		return "Ordinary Quadrangle";
 	}
 	public boolean equal(Quadrangle q) {
-		
+		Triangle t1,t2,t11,t22;
+		Point[] p1= {angles[0],angles[1],angles[2]};
+		Point[] p2= {angles[3],angles[1],angles[2]};
+		Point[] p11= {q.angles[0],q.angles[1],q.angles[2]};
+		Point[] p22= {q.angles[3],q.angles[1],q.angles[2]};
+		t1=new Triangle(p1);
+		t2=new Triangle(p2);
+		t11=new Triangle(p11);
+		t22=new Triangle(p22);
+		if(t1.equal(t11) && t2.equal(t22)) return true;
+		return false;
 	}
 
 }
