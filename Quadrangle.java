@@ -121,5 +121,17 @@ public class Quadrangle {
 		if(t1.equal(t11) && t2.equal(t22)) return true;
 		return false;
 	}
+	
+	public String toString() {
+		return "Quadrangle with: " + angles[0] + "-" + angles[1] + 
+				"-" + angles[2] + "-" + angles[3];
+	}
+	
+	public void output() {
+		System.out.println(toString());
+		System.out.println("Circumference: " + circumference());
+		System.out.println("Area: " + area());
+		System.out.println("Type " + type());
+	}
 
 }
